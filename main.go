@@ -17,4 +17,5 @@ func main() {
 	MerkleTree()
 	claim.CreateClaim()
 	claim.AuthClaim(pubKey)
+	claim.ProofOfMemebership()
 }
