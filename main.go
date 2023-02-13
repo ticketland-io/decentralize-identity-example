@@ -11,4 +11,7 @@ func main() {
 	pubKey := privKey.Public()
 
 	fmt.Println(pubKey)
+
+	// Merkle tree
+	MerkleTree()
 }
