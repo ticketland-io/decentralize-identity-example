@@ -1,6 +1,7 @@
 package main
 
 import (
+	"did-example/claim"
 	"fmt"
 
 	"github.com/iden3/go-iden3-crypto/babyjub"
@@ -14,6 +15,6 @@ func main() {
 
 	// Merkle tree
 	MerkleTree()
-	CreateClaim()
-	AuthClaim(pubKey)
+	claim.CreateClaim()
+	claim.AuthClaim(pubKey)
 }

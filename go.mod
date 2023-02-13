@@ -1,4 +1,4 @@
-module did-exmaple
+module did-example
 
 go 1.19
 
