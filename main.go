@@ -14,4 +14,6 @@ func main() {
 
 	// Merkle tree
 	MerkleTree()
+	CreateClaim()
+	AuthClaim(pubKey)
 }
