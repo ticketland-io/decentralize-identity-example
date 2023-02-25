@@ -47,3 +47,16 @@ func CreateIdentity(authClaim *core.Claim) (*merkletree.MerkleTree, *merkletree.
 	// print the roots
 	return clt, ret, rot
 }
+
+
+/// Each identity has a unique identifier. ID is:
+///
+/// 1. Permanent: it remains the same for the entire existence of an identity.
+/// 2. Unique: No two identities can have the same ID.
+///
+/// The ID is deterministically [calculated](https://docs.iden3.io/protocol/spec/#genesis-id) from the Genesis State.
+func ID(genesisState merkletree.Hash) * core.DID {
+	id, _ := core.DIDGenesisFromIdenState(core.TypeDefault, genesisState.BigInt())
+
+	return id
+}

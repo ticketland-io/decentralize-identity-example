@@ -21,6 +21,7 @@ func main() {
 	claim.ProofOfMembership()
 
 	clt, ret, rot := identity.CreateIdentity(authClaim)
+	// The very first identity state of an identity is defined as *Genesis State*
 	state := identity.CreateIdentityState(clt, ret, rot)
 
 	fmt.Println("identity state:", state)
