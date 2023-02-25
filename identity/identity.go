@@ -2,7 +2,6 @@ package identity
 
 import (
 	"context"
-	"fmt"
 
 	core "github.com/iden3/go-iden3-core"
 	"github.com/iden3/go-merkletree-sql"
@@ -26,7 +25,7 @@ import (
 ///
 /// An identity must issue at least one Auth Claim to operate properly. This is the first claim that is issued by an
 /// identity and that must be added to the ClT.
-func CreateIdentity(authClaim *core.Claim) {
+func CreateIdentity(authClaim *core.Claim) (*merkletree.MerkleTree, *merkletree.MerkleTree, *merkletree.MerkleTree) {
 	ctx := context.Background()
 	
 	// Create empty Claim's tree (Clt)
@@ -46,5 +45,5 @@ func CreateIdentity(authClaim *core.Claim) {
 	clt.Add(ctx, index, value)
 
 	// print the roots
-	fmt.Println(clt.Root().BigInt(), ret.Root().BigInt(), rot.Root().BigInt())
+	return clt, ret, rot
 }
