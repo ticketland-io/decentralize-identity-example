@@ -20,5 +20,8 @@ func main() {
 	authClaim := claim.AuthClaim(pubKey)
 	claim.ProofOfMembership()
 
-	identity.CreateIdentity(authClaim)
+	clt, ret, rot := identity.CreateIdentity(authClaim)
+	state := identity.CreateIdentityState(clt, ret, rot)
+
+	fmt.Println("identity state:", state)
 }
