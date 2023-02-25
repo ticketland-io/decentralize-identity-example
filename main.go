@@ -31,6 +31,7 @@ func main() {
 	// No Personal Identifiable Information (PPI) is stored on-chain. From the IdS is impossible to retrieve any
 	// information (represented as claim) stored inside the Identity Claims Tree
 	id := identity.ID(state)
+	profile := identity.Profile(*id)
 
-	fmt.Println("ID:", id)
+	fmt.Println("Profile:", profile.String())
 }
