@@ -55,8 +55,8 @@ func CreateIdentity(authClaim *core.Claim) (*merkletree.MerkleTree, *merkletree.
 /// 2. Unique: No two identities can have the same ID.
 ///
 /// The ID is deterministically [calculated](https://docs.iden3.io/protocol/spec/#genesis-id) from the Genesis State.
-func ID(genesisState merkletree.Hash) * core.DID {
-	id, _ := core.DIDGenesisFromIdenState(core.TypeDefault, genesisState.BigInt())
+func ID(genesisState *merkletree.Hash) *core.ID {
+	id, _ := core.IdGenesisFromIdenState(core.TypeDefault, genesisState.BigInt())
 
 	return id
 }
