@@ -50,6 +50,7 @@ func CreateClaim() {
 	// This hash determines the leaf position where the value of the claim will be stored.
 	// It means that you cannot have two claims with the same index inside the tree. As opposite to the index, the values slots could
 	// be the same for different claims if their indexes are different.
+	//
 	// Index:
 	// {
 	// 	"3613283249068442770038516118105710406958", // Claim Schema hash

@@ -26,7 +26,7 @@ import (
 // 2. Storing the role inside v_2 means that the uniqueness inside the tree is only determined the person identifier
 //
 // DAO member covers more than one role, it makes more sense to store the role inside i_2.
-func ProofOfMemebership() {
+func ProofOfMembership() {
 	schema, _ := os.ReadFile("../schema/proof-of-dao-membership.json-ld")
 	
 	var schemHash core.SchemaHash
